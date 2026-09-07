@@ -1,0 +1,7 @@
+schema: spec-driven
+
+# Ausgangslage des Projekts / Initial situation.
+# Dieser Text ist zugleich das Feld "Ausgangslage" des Projektauftrags.
+context: |
+  TODO: Wer hat das Problem, und was ist heute daran unbefriedigend?
+  TODO: Tech-Stack des Teams.

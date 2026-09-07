@@ -1,0 +1,42 @@
+= Projektdokumentation
+:toc: left
+:toc-title: Inhalt
+:toclevels: 3
+:icons: font
+:source-highlighter: rouge
+:experimental:
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+== Governance
+
+* link:projektantrag.html[Projektantrag / Project proposal]
+* link:projektauftrag.html[Projektauftrag / Project charter]
+* link:meilensteinplan.html[Meilensteinplan / Milestone plan]
+* link:abnahme.html[Abnahme / Acceptance]
+
+== Durchfuehrung
+
+Der Sollzustand steht in `openspec/specs/`, die Aenderungen in
+`openspec/changes/`. Beides wird nicht abgeschrieben, sondern verlinkt — zwei
+Wahrheiten waeren schlimmer als eine unbequeme.
+
+== Architektur
+
+TODO: Ueberblick, Diagramme als PlantUML.
+
+[plantuml,architektur,svg]
+----
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+[Frontend] --> [Backend]
+[Backend] --> [Datenbank]
+@enduml
+----

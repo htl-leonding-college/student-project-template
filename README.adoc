@@ -1,0 +1,89 @@
+= Projektname
+:toc: left
+:toc-title: Inhalt
+:toclevels: 3
+:icons: font
+:source-highlighter: rouge
+:experimental:
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+Geruest fuer das Jahresprojekt im 3. Jahrgang. Zwei Ebenen, die sich nicht
+vermischen:
+
+[cols="1,3",options="header"]
+|===
+|Ebene |Wo
+
+|*Governance* — aussen, eingefroren, verpflichtend
+|`docs/` — Projektantrag, Projektauftrag, Meilensteinplan, Abnahme
+
+|*Durchfuehrung* — innen, frei
+|`openspec/` — specs und changes, `src/` — Code
+|===
+
+Der Projektauftrag wird eingefroren und bleibt der Beurteilungsanker. Gebaut
+wird gegen die specs; was sich unterwegs aendert, wird als Change sichtbar und
+liegt am Ende in `openspec/changes/archive/`.
+
+== Ablauf
+
+[source,bash]
+----
+openspec propose      # Vorhaben beschreiben -> proposal, specs, tasks
+openspec apply        # Aufgaben abarbeiten
+openspec archive      # Erledigtes archivieren = Meilensteinnachweis
+----
+
+[cols="1,2",options="header"]
+|===
+|Feld im Projektauftrag |Entsprechung hier
+
+|Ausgangslage / Initial situation
+|`openspec/config.yaml` -> `context:`
+
+|Zielsetzung / Objectives
+|Menge der `openspec/specs/`
+
+|Untersuchungsanliegen / Research objective
+|`proposal.md` -> Why
+
+|Geplantes Ergebnis / Planned deliverable
+|`spec.md` -> Requirements und Scenarios
+
+|Meilenstein + Termin / Milestone
+|Change archiviert bis zum Termin
+
+|Verantwortlich / Responsible
+|Zuschnitt der Changes je Schueler, dazu die git-Historie
+|===
+
+== Baseline
+
+Ist die erste Spec-Menge fertig, wird sie markiert:
+
+[source,bash]
+----
+git tag baseline-v1
+git push origin baseline-v1
+----
+
+Das "Pflichtenheft" ist ab dann ein `git diff` entfernt: `git diff baseline-v1 --
+openspec/specs/` zeigt, was sich seit dem Einfrieren geaendert hat.
+
+== Dokumentation
+
+`docs/` wird bei jedem Push nach `main` zu einer Website gebaut
+(`.github/workflows/docs.yml`). Dokumentation entsteht damit waehrend des
+Projekts, nicht am Jahresende.
+
+[source,bash]
+----
+./local-convert.sh      # lokal bauen, ohne Installation ausser Docker
+----
