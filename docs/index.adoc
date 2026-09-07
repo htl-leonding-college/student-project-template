@@ -21,6 +21,10 @@ endif::[]
 * link:meilensteinplan.html[Meilensteinplan / Milestone plan]
 * link:abnahme.html[Abnahme / Acceptance]
 
+Die Vorlagen stammen aus `curriculum-syp3/templates/governance/` und tragen die
+Feldstruktur des Diplomarbeitsantrags — dieselben Felder, die euch im
+5. Jahrgang wieder begegnen.
+
 == Durchfuehrung
 
 Der Sollzustand steht in `openspec/specs/`, die Aenderungen in
