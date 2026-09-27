@@ -14,22 +14,22 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-Geruest fuer das Jahresprojekt im 3. Jahrgang. Zwei Ebenen, die sich nicht
+Gerüst für das Jahresprojekt im 3. Jahrgang. Zwei Ebenen, die sich nicht
 vermischen:
 
 [cols="1,3",options="header"]
 |===
 |Ebene |Wo
 
-|*Governance* — aussen, eingefroren, verpflichtend
+|*Governance* — außen, eingefroren, verpflichtend
 |`docs/` — Projektantrag, Projektauftrag, Meilensteinplan, Abnahme
 
-|*Durchfuehrung* — innen, frei
+|*Durchführung* — innen, frei
 |`openspec/` — specs und changes, `src/` — Code
 |===
 
 Der Projektauftrag wird eingefroren und bleibt der Beurteilungsanker. Gebaut
-wird gegen die specs; was sich unterwegs aendert, wird als Change sichtbar und
+wird gegen die specs; was sich unterwegs ändert, wird als Change sichtbar und
 liegt am Ende in `openspec/changes/archive/`.
 
 == Ablauf
@@ -61,7 +61,7 @@ openspec archive      # Erledigtes archivieren = Meilensteinnachweis
 |Change archiviert bis zum Termin
 
 |Verantwortlich / Responsible
-|Zuschnitt der Changes je Schueler, dazu die git-Historie
+|Zuschnitt der Changes je Schüler, dazu die git-Historie
 |===
 
 == Baseline
@@ -75,15 +75,15 @@ git push origin baseline-v1
 ----
 
 Das "Pflichtenheft" ist ab dann ein `git diff` entfernt: `git diff baseline-v1 --
-openspec/specs/` zeigt, was sich seit dem Einfrieren geaendert hat.
+openspec/specs/` zeigt, was sich seit dem Einfrieren geändert hat.
 
 == Dokumentation
 
 `docs/` wird bei jedem Push nach `main` zu einer Website gebaut
-(`.github/workflows/docs.yml`). Dokumentation entsteht damit waehrend des
+(`.github/workflows/docs.yml`). Dokumentation entsteht damit während des
 Projekts, nicht am Jahresende.
 
 [source,bash]
 ----
-./local-convert.sh      # lokal bauen, ohne Installation ausser Docker
+./local-convert.sh      # lokal bauen, ohne Installation außer Docker
 ----

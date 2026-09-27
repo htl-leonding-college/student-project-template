@@ -25,20 +25,23 @@ Die Vorlagen stammen aus `curriculum-syp3/templates/governance/` und tragen die
 Feldstruktur des Diplomarbeitsantrags — dieselben Felder, die euch im
 5. Jahrgang wieder begegnen.
 
-== Durchfuehrung
+== Durchführung
 
-Der Sollzustand steht in `openspec/specs/`, die Aenderungen in
+Der Sollzustand steht in `openspec/specs/`, die Änderungen in
 `openspec/changes/`. Beides wird nicht abgeschrieben, sondern verlinkt — zwei
-Wahrheiten waeren schlimmer als eine unbequeme.
+Wahrheiten wären schlimmer als eine unbequeme.
 
 == Architektur
 
-TODO: Ueberblick, Diagramme als PlantUML.
+TODO: Überblick, Diagramme als PlantUML.
 
 [plantuml,architektur,svg]
 ----
 @startuml
-skinparam monochrome true
+<style>
+element { BackgroundColor #EDF3FA; LineColor #7C93AD; FontColor #21303F }
+arrow { LineColor #5A6B7D; FontColor #21303F }
+</style>
 skinparam shadowing false
 [Frontend] --> [Backend]
 [Backend] --> [Datenbank]
